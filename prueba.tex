@@ -1,0 +1,185 @@
+\documentclass[12pt]{article}
+\usepackage[spanish]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+
+% \usepackage{amssymb}
+% DATOS PARA EL ENCABEZADO
+%\paper{ANÁLISIS MATEMÁTICO III\\Ing. Gabriel Pérez Lance}
+\title{TP 02: Funciones en el plano complejo}
+%\carrera{INGENIERÍA EN INFORMÁTICA}
+
+\begin{document} 
+\let\>=\rangle
+\let\<=\langle
+\let\pe=\preccurlyeq
+\let\minus=\smallsetminus
+\let\phi=\varphi
+\let\w=\omega
+\let\a=\alpha
+\let\b=\beta
+\def\Z{{\mathbb Z}}
+\let\iff=\leftrightarrow
+\let\Iff=\Leftrightarrow
+
+%\begin{questions}
+%\question Sea $w = f(z) = z(z+1)$, hallar
+  \begin{enumerate}
+  \item $f(-i)$
+  \item $f(2-i)$
+  \item $f(3+2i)$
+  \item $f(2e^{\frac{3\pi}{4}i})$
+  \item $f(e^{-\pi i})$
+  \end{enumerate}
+
+%\question Si $w=f(z)=\frac{3z-1}{2z+1}$ válido para $z\neq -\frac{1}{2}$ hallar y graficar
+\begin{enumerate}
+\item $f(i)$
+\item $f(2+i)$
+\item $f(2e^{-\frac{\pi}{3}i})$
+\item $f(\frac{1}{z})$
+\end{enumerate}
+
+%\question Función $w = f(z) = z^2$ 
+\begin{enumerate}
+\item Definiendo $z=(x+iy)$, $w=(u+iv)$ encontrar las expresiones
+\begin{enumerate}
+\item $u(x,y)=$
+\item $v(x,y)=$
+\end{enumerate}
+\item Definiendo $z=re^{\alpha i}$, $w=\rho e^{\varphi i}$ encontrar las expresiones
+\begin{enumerate}
+\item $\rho(r,\alpha)=$
+\item $\varphi(r,\alpha)=$
+\end{enumerate}
+\item Encontrar y graficar el conjunto de complejos $z=(x+iy)$ en el plano $Z$ cuya imagen sea:
+\begin{enumerate}
+\item $w=(u+iv)$ con $u=c_1 > 0$
+\item $w=(u+iv)$ con $u=c_1 < 0$
+\item $w=(u+iv)$ con $v=c_2 > 0$
+\item $w=(u+iv)$ con $v=c_2 < 0$
+\end{enumerate}
+\item Encontrar y graficar la imagen de las siguientes regiones definidas en el plano $Z$
+\begin{enumerate}
+\item $z=re^{i\phi}$ para $0<z<2$ y $ 0<\phi< \frac{\pi}{4}$
+\item $z=re^{i\phi}$ para $0<z<2$ y $ \pi<\phi< \frac{5\pi}{4}$
+\end{enumerate}
+\end{enumerate}
+
+%\question Función exponencial $w = f(z) = e^z$
+\begin{enumerate}
+\item Si definimos $w = \rho e^{i\phi} = f(z)$, con $z=(x+iy)$ encuentre la expresión de
+\begin{enumerate}
+\item $\rho = \rho(x,y)$
+\item $\phi = \phi(x,y)$
+\end{enumerate} 
+\item Encontrar los valores de $z$ que verifican las siguientes ecuaciones. Graficar
+\begin{enumerate}
+\item $e^z=-1$
+\item $e^z=-2$
+\item $e^z=1+i\sqrt{3}$
+\item $e^{2z-1}=1$
+\end{enumerate}
+\item Encontrar y graficar la imagen de las siguientes regiones definidas en el plano $Z$
+\begin{enumerate}
+\item $z=(x+iy)$ con $x=c_1 > 0$
+\item $z=(x+iy)$ con $y=c_2 < 0$
+\end{enumerate}
+\item Encontrar y graficar la imagen de la región rectangular definida en el plano Z por las rectas $x=a, x=b$ con $ a<b $, $y=c, y=d$ con $c<d$. 
+\end{enumerate}
+
+%\question Función Logarítmica $e^w = z$
+\begin{enumerate}
+\item Encontrar los valores de $w$ que verifiquen
+\begin{enumerate}
+\item $e^w=-1-i\sqrt{3}$
+\item $e^w=1$
+\item $e^w=-ei$
+\end{enumerate}
+\end{enumerate}
+
+%\question Funciones Trigonométricas
+\begin{enumerate}
+\item Si $w = (u+iv) = cos (z) = cos(x+iy)$ desarrollar para encontrar las expresiones de $u(x,y), v(x,y)$.\\ Recordar que  $cos(z) = \frac{e^{iz}+e^{-iz}}{2}$.
+\item Con las expresiones del punto anterior, verificar que cuando $z = x +i 0$, es decir un número real, se verifica que $w$ también es real y de valor $w=cos(x)$
+\item Encontrar la imagen a través de $f(z)=cos(z)$ de una recta horizontal $z=x+ia$. Graficar y analizar
+\item Encontrar la imagen a través de $f(z)=cos(z)$ de una recta vertical $z=b+iy$. Graficar y analizar
+\item Usando los resultados de los puntos anteriores, encontrar la imagen de una rectangulo definido por las rectas $x=a, x=b, y=c, y=d$ con $a < c < b < d$. Graficar
+\item Usando los resultados del punto anterior, encontrar la imagen de un rectangulo definido por las rectas  $x=0, x=\frac{\pi}{2}, y=c, y=d$, con $c<d$. Graficar
+\end{enumerate}
+
+%\question Ejercicios adicionales
+\begin{enumerate}
+\item Utilizando la función compleja $w=f(z)=z^2$ encontrar la región en el plano $Z$ cuya imagen es el cuadrado en el plano $W$ definido por las rectas $u=1, u=2, v=1,$ y $v=2$.
+\item Mapear la región en el plano $Z$ definida por $z=re^{i\phi}$ para $0<z<2$ y $ 0<\phi< \frac{\pi}{4}$ utilizando las funciones:
+\begin{enumerate}
+\item $w = z^3$
+\item $w = z^4$
+\end{enumerate}
+\item Graficar la imagen en el plano $W$ de los siguientes conjuntos, utilizando la función $w=z^2$. Realizar el grafico de ambos conjuntos
+\begin{enumerate}
+\item la recta de puntos $z=(x+iy)$ con $x=cte > 0$
+\item la recta de puntos $z=(x+iy)$ con $y=cte > 0$
+\item la recta de puntos $z=(x+iy)$ con $x=y$
+\end{enumerate}
+\item Realizar los ejercicios del punto 6 para  $sin(z) = \frac{e^{iz}-e^{-iz}}{2}$
+\end{enumerate}
+
+%\question Función Inversión $w = f(z) = \frac{1}{z}$
+\begin{enumerate}
+\item Encontrar el conjunto imagen de las siguientes rectas:
+\begin{enumerate}
+\item $z=(x+iy)$ con $x=c_1 > 0$ - recta vertical
+\item $z=(x+iy)$ con $x=c_1 < 0$ - recta vertical
+\item $z=(x+iy)$ con $y=c_2 > 0$ - recta horizontal
+\item $z=(x+iy)$ con $y=c_2 < 0$ - recta horizontal
+\end{enumerate}
+\item Encontrar y graficar en que se transforma el semiplano $A$ defindo por $A=\lbrace z \in \mathbb{C} \therefore 0 < c_1 \leq \mathrm{\Re }(z) \rbrace$
+\item Encontrar y graficar la imagen del cuadrante definido por $z \in \mathbb{C} \therefore x > 1 \wedge y > 0$
+\end{enumerate}
+
+%\question Función Bilineal $w = \frac{az + b}{cz+ d}$
+\begin{enumerate}
+\item Encontrar la transformación bilineal que mapea los puntos $z_1 = 2, z_2=i, z_3 = -2$ en los puntos $w_1 = 1, w_2 = i, w_3 = -1$. Graficar
+\item Un punto fijo en una transformación $w=f(z)$ es un punto $z_0$ donde se cumple $f(z_0)=z_0$.  Las transformaciones bilineales tienen como máximo 2 puntos fijos.
+\begin{itemize}
+\item Encontrar los puntos fijos de las transformaciones:
+\begin{enumerate}
+\item $w=\frac{z-1}{z+1}$
+\item $w=\frac{6z-9}{z}$
+\end{enumerate}
+\item Para la transformación del punto anterior $w=\frac{6z-9}{z}$, encontrar en que se mapea el interior de la región delimitada por el conjunto $A=\lbrace z =(e^{i\phi} + 3), 0 \leq \phi < 2\pi \rbrace$. Graficar
+\item Para la transformación del punto anterior $w=\frac{6z-9}{z}$, encontrar en que se mapea el segmento $S= [-i, i]$. Graficar
+\end{itemize}
+\item Toda transformación bilineal $w = \frac{az + b}{cz+ d}$ puede descomponerse en 4 transformaciones aplicadas en secuencia:
+\begin{itemize}
+\item $f_1(z) = z + \frac{d}{c}$, traslación en $\frac{d}{c}$
+\item $f_2(z) = \frac{1}{z}$, inversión
+\item $f_3(z) = \frac{bc-ad}{c^2}z$, homotecia y rotación
+\item $f_4(z) = z + \frac{a}{c}$, traslación en $\frac{a}{c}$
+\end{itemize}
+\begin{enumerate}
+\item Descomponer la transformación bilineal $w = \frac{i(1-z)}{1+z}$.
+\item Transformar la circunferencia de radio $r=1$ centrada en el origen.\\
+En cada paso graficar e indicar las imágenes de los puntos $A=1, B=i, C=-1, D=-i$.
+\item Encontrar y graficar la imagen de la región interior a la circunferencia.
+\end{enumerate}
+\item Graficar la región que se encuentra dentro del disco $\left| z - 2\right| < 2$ y fuera del círculo $\left| z -1 \right| = 1 $
+\begin{enumerate}
+\item Encontrar la imagen de dicha región cuando es transformada por $w=\frac{-iz+4i}{z}$
+\item Graficar, indicando las imágenes de puntos característicos del contorno de la región.
+\end{enumerate}
+\item Encontrar la transformación bilineal que mapea los puntos  $z_1 = 1, z_2=i, z_3 = -1$ en los puntos $w_1 = 0, w_2 = 1, w_3 = \infty$. Graficar
+\begin{itemize}
+\item Encuentra y grafica la imagen del interior del triangulo definido por  $z_1, z_2, z_3$
+\end{itemize}
+\item Encontra la imagen del primer cuadrante $x \geqslant 0, y \geqslant 0$ mediante la transformación $w = \frac{z-1}{z+1}$.
+\begin{itemize}
+\item Encuentra y grafica la imagen del interior del triangulo definido por  $z_1 = i, z_2 = 1, z_3 = 0$
+\end{itemize}
+\end{enumerate}
+
+%\end{questions}
+\end{document}
+

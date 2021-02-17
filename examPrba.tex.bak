@@ -1,0 +1,124 @@
+\documentclass[12pt]{article}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usepackage{wrapfig}
+\usepackage{xfrac}
+
+\usepackage[matrix,arrow]{xy}
+\usetikzlibrary{intersections}
+
+\usepackage{subcaption}
+\usepackage{exam,amssymb}
+
+\DeclareMathSizes{12}{12}{10}{8}
+
+% DATOS PARA EL ENCABEZADO
+\paper{ANÁLISIS MATEMÁTICO III}
+\title{Exámen - 17 de Febrero de 2021}
+\carrera{INGENIERÍA EN INFORMÁTICA}
+
+\begin{document} 
+\let\>=\rangle
+\let\<=\langle
+\let\pe=\preccurlyeq
+\let\minus=\smallsetminus
+\let\phi=\varphi
+\let\w=\omega
+\let\a=\alpha
+\let\b=\beta
+\def\Z{{\mathbb Z}}
+\let\iff=\leftrightarrow
+\let\Iff=\Leftrightarrow
+
+
+\framebox[\textwidth][l]{Apellido, Nombre:} \par
+\textbf{IMPORTANTE:} La justificación es fundamental y debe estar presente en cada ejercicio
+
+
+\begin{questions}
+\question Determinar y graficar la imagen de la función $z=2\, e^{z}+1+i$ con $z$ que va desde $0$ hasta $4i$, cuando es transformada mediante la función $f(z)=\frac{z(1+i)+2}{2z+(1-i)}$. Determinar claramente la ubicación de la imagen de los siguientes puntos $A=(0 + 1i)$ y $B= (0+3i)$.
+%\begin{figure}[h!]
+%	\begin{tikzpicture}
+%	\draw[->, gray] (0,-1)--(0,3);
+%	\draw[->, gray] (-3,0)--(1,0);
+%	\draw[-, very thick] (0,2)  arc[radius = 1.41, start angle= 45, end angle= 225];
+%	\draw[-, gray] (-2,0)  arc[radius = 1.41, start angle= 225, end angle= 405];
+%	\node at (0.25, 2.1){2i};
+%	\node at (-2.25, -0.25){-2};
+%	\end{tikzpicture}
+%	\caption{ }
+%	\label{fig:ejercicio1}
+%\end{figure}
+
+
+\question Calcular (si existe) $ \lim_{z \to i} \frac{z\,\Re(iz)+i}{i-z} $. En caso de no existir, justificar {\bfseries{ por qué no existe}}, y de ser posible dar un contraejemplo.
+
+\question Determinar la derivabilidad de la función $f(z)= \mathrm{\Re }(\overline{z})^2 +i \mathrm{\Im }(z)^2$
+  
+%\question Calcular la siguiente integral, por el camino indicado en la figura \ref{fig:subfig4}. $$\int_{\gamma} \frac{i(z-1)^2}{3(z^2-1)}\,\mathrm{d}z$$
+%\begin{figure}[h!]
+%\centering
+%	\begin{tikzpicture}
+%		\draw[->, gray] (0,1)--(0,-3);
+%		\draw[->, gray] (-3,0)--(3,0);
+%		\node at (3, -0.25) {x}; 
+%		\node at (0.35, -3) {-y}; 
+%		\draw[->, very thick] (-2,0)  arc[radius = 2, start angle= 180, end angle= 360];
+%		\node at (1.35, -1.9) {$\gamma$};
+%		\node at (2,0.25) {2};
+%		\node at (-2,0.25) {-2};
+%		\end{tikzpicture}
+%		\caption{}
+%        \label{fig:subfig4}
+%\end{figure}
+
+\question Calcular $\oint_{C} \frac{z-2}{z^2-2z+2}\,\mathrm{d}z$, por el camino indicado en la figura \ref{fig:subfig5}.
+
+\begin{figure}[h!]
+\centering
+	\begin{tikzpicture}[scale=0.5]
+		\draw[->, gray] (0,-1)--(0,4);
+		\draw[->, gray] (-4,0)--(4,0);
+		\node at (4, -0.25) {x}; 
+		\node at (0.25, -4) {y}; 
+		\draw[->, very thick] (0,-3)  arc[radius = 3, start angle= -90, end angle= 90];
+		\draw[->, very thick] (0,3) -- (0,-3);
+		\node at (3.25,-0.25) {3};
+		\node at (-0.5,3.15) {3i};
+		\node at (-0.5,-3.35) {-3i};
+		\end{tikzpicture}
+		\caption{}
+        \label{fig:subfig5}
+\end{figure}
+
+\question Encontrar el desarrollo en serie de Laurent centrado en $z=-3$ de la función
+$$w(z) = \frac{z+i}{z^2+2\ z-8}$$
+
+
+\end{questions}
+\end{document}
+
+
+
+\question
+El sistema de codificación por tonos (DTMF) usado por el sistema telefónico, codifica sumando señales $f(t) = \cos
+(f_0 t)$. En particular un dígito del teclado es codificado sumando dos señales cosenoidales de distinta frecuencia:
+\begin{center}
+$D_x(t) = \cos (f_A t) + \cos (f_B t)$
+\end{center}
+Por ejemplo para el dígito 3, de acuerdo a la tabla:
+\begin{center}
+$D_3(t) = \cos (697 t) + \cos (1477 t)$
+\end{center}
+\begin{enumerate}
+\item Encontrar la transformada de Fourier para la señal de ejemplo $D_3(t)$.
+\item Dibujar el espectro de la señal.
+\item La señal es digitalizada utilizando una frecuencia de muestreo de 10KHz. Dibujar el espectro de la señal digitalizada.
+\item Si la máxima frecuencia a transmitir por la línea telefónica es de 4Hz, ¿Cuál es la frecuencia mínima de muestreo que puede emplearse para digitalizar las señales?.
+\end{enumerate}
+
+\end{questions}
+\end{document}
+

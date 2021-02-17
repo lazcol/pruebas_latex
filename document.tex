@@ -1,0 +1,26 @@
+\documentclass[a4paper]{article}
+\usepackage[spanish]{babel}
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{pstricks}
+\usepackage{pdftricks}
+\usepackage{pst-2dplot,pstricks-pdf}
+
+\begin{document}
+	
+	\readdata{\foo}{foo.data}
+	\begin{psgraph}[Dy=1,Dx=1,ticksize=4pt,labels=none,linewidth=0.5pt]{<->}%
+		(0,0)(-.5,-.5)(12,4){10cm}{5.71cm}
+		\psset{xunit=0.4cm,yunit=2cm}
+		\dataplot[plotstyle=curve]{\foo}
+		\dataplot{[{{0,2.5}{12,2.5}}]}
+	\end{psgraph}
+	%	\dataplot[origin={0,0}]{\foo}
+	\savedata{\mydata}[ { {0,  0},  {1.,  0.946083},  {2.,  1.60541},  {3.,  1.84865},  {4.,1.7582}, {5.,  1.54993},  {6.,  1.42469},  {7.,  1.4546},  {8.,  1.57419}, {9.,  1.66504},  {10.,  1.65835},  {11.,  1.57831},  {12.,  1.50497} {13.,  1.49936},  {14.,  1.55621},  {15.,  1.61819},  {16.,  1.6313}, {17.,  1.59014},  {18.,  1.53661},  {19.,  1.51863},  {20.,  1.54824}}]
+	
+	
+	\vspace{6cm}
+	
+	
+	\dataplot[plotstyle=curve]{\mydata}
+\end{document}

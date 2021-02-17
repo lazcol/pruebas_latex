@@ -1,0 +1,49 @@
+\listfiles
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage[pdf]{pstricks}
+\usepackage{pdftricks}
+\usepackage{pst-eucl,pstricks-add}
+\begin{document}
+
+\psset{xAxisLabel=$x$,yAxisLabel=$y$,PointName=none,plotpoints=1000}%
+%\def\F{x 2 mul sqrt}%
+\def\F{x dup mul -1 mul 25 add sqrt}
+\def\f{x 2 sub dup mul 8 div 1 add}
+
+\begin{psgraph}[Dy=1,Dx=1,ticksize=4pt,labels=none,linewidth=0.5pt]{<->}%
+	(0,0)(-5,-0.5)(5,5.2){10cm}{5.71cm}%{0.5\linewidth}{0.5\linewidth}
+	\psplot{-5}{5}{\F}
+	\psplot{-3.5}{5}{\f}
+	\pstInterFF{\F}{\f}{-3}{A}
+	\pstInterFF{\F}{\f}{4}{B}
+	\pscustom[linestyle=none,fillstyle=hlines,hatchsep=4pt,hatchcolor=blue]{\code{ \psGetNodeCenter{A} \psGetNodeCenter{B}  }
+		\psplot{A.x}{B.x}{\F}
+		\psplot{B.x}{A.x}{\f}}
+\end{psgraph}
+
+\bigskip
+\begin{verbatim}
+\usepackage{pst-eucl,pstricks-add}
+
+
+\psset{xAxisLabel=$x$,yAxisLabel=$y$,PointName=none,plotpoints=1000}%
+\def\F{x 2 mul sqrt}%
+\def\f{x 2 sub dup mul 8 div 1 add}
+
+\begin{psgraph}[ticksize=0,arrowscale=1.5,labels=none,linewidth=0.5pt]{->}%
+   (0,0)(-0.1,-0,1)(8,5){0.5\linewidth}{0.5\linewidth}%
+  \psplot{0}{8}{\F} \psplot{0}{8}{\f}%
+%
+\pstInterFF{\F}{\f}{1}{A}%
+\pstInterFF{\F}{\f}{8}{B}%
+%
+\pscustom[linestyle=none,fillstyle=hlines,hatchsep=4pt,hatchcolor=blue]{%
+  \code{ \psGetNodeCenter{A} \psGetNodeCenter{B} }
+  \psplot{A.x}{B.x}{\F} \psplot{B.x}{A.x}{\f}
+}
+\end{psgraph}
+\end{verbatim}
+
+\end{document}
